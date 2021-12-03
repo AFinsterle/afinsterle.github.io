@@ -1,0 +1,19 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testsite</title>
+	<script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+  </head>
+  <body>
+<input id="clickMe" type="button" value="TestFunktion" onclick="testFunction();" />
+
+<script>
+function testFunction() {
+const client = FHIR.client("https://8eb7a5dc-d107-4269-8919-dcbef1f62e36.ma.bw-cloud-instance.org/fhir-server/api/v4");
+client.request("Patient").then(console.log).catch(console.error);
+}
+</script>
+
+  </body>
+</html>
